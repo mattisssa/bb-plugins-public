@@ -1,0 +1,213 @@
+/* The plugin's own footer icon, hidden while the summary stands in for it. */
+li[data-pool-usage-anchor] {
+  display: none;
+}
+
+.pool-usage-hot {
+  color: var(--destructive);
+}
+
+.pool-usage-panel {
+  display: grid;
+  gap: 4px;
+}
+
+/* Footer summary */
+
+.pool-usage-footer {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  min-width: 0;
+  margin-left: auto;
+  list-style: none;
+}
+
+/* bb's badges follow the summary; when they wrap above it, keep them right. */
+.pool-usage-footer ~ li {
+  margin-inline-start: auto;
+}
+
+.pool-usage-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 32px;
+  padding: 0 6px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted-foreground);
+  font: inherit;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+
+.pool-usage-button:hover {
+  background: var(--sidebar-accent, var(--accent));
+  color: var(--sidebar-foreground, var(--foreground));
+}
+
+.pool-usage-button:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: -2px;
+}
+
+/* Outranks the size classes bb's provider icon carries. */
+.pool-usage-button .pool-usage-logo {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.pool-usage-button .pool-usage-logo > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* Provider card, in bb's menu surface or its footer panel */
+
+.pool-usage-popover {
+  position: fixed;
+  min-width: 150px;
+  max-width: calc(100vw - 16px);
+}
+
+.pool-usage-card {
+  font-size: 12px;
+  line-height: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.pool-usage-head,
+.pool-usage-steps li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 8px;
+}
+
+.pool-usage-head {
+  margin-bottom: 2px;
+  font-size: 13px;
+}
+
+.pool-usage-head .pool-usage-logo {
+  flex: none;
+  width: 13px;
+  height: 13px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.pool-usage-head .pool-usage-logo > * {
+  width: 100%;
+  height: 100%;
+}
+
+.pool-usage-name {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.pool-usage-name small,
+.pool-usage-steps li > span:first-child,
+.pool-usage-note {
+  color: var(--muted-foreground);
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.pool-usage-total {
+  margin-left: auto;
+  padding-left: 16px;
+  font-weight: 600;
+}
+
+.pool-usage-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 11.5px;
+}
+
+.pool-usage-steps li {
+  justify-content: space-between;
+}
+
+.pool-usage-note {
+  margin: 0;
+  padding: 3px 8px;
+  font-size: 11.5px;
+}
+
+/* The card's reset, a menu item of bb's menu surface. */
+.pool-usage-reset {
+  display: block;
+  width: 100%;
+  margin-top: 2px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pool-usage-reset:hover {
+  background: var(--state-hover);
+}
+
+.pool-usage-reset:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: -2px;
+}
+
+.pool-usage-reset span {
+  color: var(--muted-foreground);
+}
+
+/* Extra usage, the spending past the subscription */
+
+.pool-usage-extra {
+  margin-top: 2px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+}
+
+.pool-usage-extra-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 3px 8px;
+  font-size: 11.5px;
+}
+
+.pool-usage-extra-head > span:first-child {
+  color: var(--muted-foreground);
+}
+
+.pool-usage-meter {
+  height: 4px;
+  margin: 2px 8px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--muted);
+}
+
+.pool-usage-meter > div {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+}
+
+.pool-usage-meter > div.pool-usage-hot {
+  background: var(--destructive);
+}

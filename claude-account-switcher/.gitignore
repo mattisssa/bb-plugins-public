@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.codegraph/
+.claude/settings.local.json
+coverage/
+*.tsbuildinfo

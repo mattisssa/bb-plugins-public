@@ -1,0 +1,14 @@
+{
+  "$schema": "https://getbb.app/schemas/plugins.schema.json",
+  "schemaVersion": 1,
+  "name": "mattisssa-bb-plugins",
+  "plugins": [
+    { "name": "canvas", "source": "./canvas" },
+    { "name": "image-feedback", "source": "./image-feedback" },
+    { "name": "claude-account-switcher", "source": "./claude-account-switcher" },
+    { "name": "jev-browse", "source": "./jev-browse" },
+    { "name": "pool-usage", "source": "./pool-usage" },
+    { "name": "thread-load", "source": "./thread-load" },
+    { "name": "project-icons", "source": "./project-icons" }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "bb-plugin-image-feedback",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "bb": ">=0.46",
+    "bbPluginSdk": ">=0.6.49"
+  },
+  "bb": {
+    "name": "Image feedback",
+    "description": "Outline areas on any image in bb, comment each, and send the marked-up image back to the thread.",
+    "branding": {
+      "icon": "MessageSquareDashed"
+    },
+    "server": "./server.ts",
+    "app": "./app.tsx"
+  },
+  "scripts": {
+    "build": "bb plugin build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.6.49",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sonner": "^2.0.8",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.11"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  }
+}

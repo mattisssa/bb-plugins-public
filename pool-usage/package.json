@@ -1,0 +1,57 @@
+{
+  "name": "bb-plugin-pool-usage",
+  "version": "0.2.6-extra.2",
+  "type": "module",
+  "author": "Yurii Rebryk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebryk/bb-plugins.git",
+    "directory": "pool-usage"
+  },
+  "bugs": {
+    "url": "https://github.com/rebryk/bb-plugins/issues"
+  },
+  "homepage": "https://github.com/rebryk/bb-plugins/tree/main/pool-usage#readme",
+  "engines": {
+    "bb": ">=0.43.4",
+    "bbPluginSdk": ">=0.5.9"
+  },
+  "bb": {
+    "name": "Pool Usage",
+    "description": "One number per provider in the sidebar footer: how much of its capacity is used, and when it frees up.",
+    "branding": {
+      "icon": "ChartColumn"
+    },
+    "server": "./server.ts",
+    "app": "./app.tsx",
+    "skills": []
+  },
+  "scripts": {
+    "build": "bb plugin build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.5.9",
+    "@radix-ui/react-dialog": "^1.1.19",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "better-sqlite3": "^12.0.0",
+    "cron-parser": "^5.5.0",
+    "hono": "^4.11.9",
+    "jsdom": "^27.0.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sonner": "^1.7.4",
+    "typescript": "^5.7.0",
+    "vaul": "^1.1.2",
+    "vitest": "^4.1.11"
+  }
+}
